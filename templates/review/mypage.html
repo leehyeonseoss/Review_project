@@ -1,0 +1,15 @@
+
+
+{% block content %}
+    <h2>{{ user.username }}님의 마이페이지</h2>
+    {% if user_reviews %}
+        <h3>작성한 리뷰</h3>
+        <ul>
+            {% for review in user_reviews %}
+                <li>{{ review.subject }} - {{ review.content }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>아직 작성한 리뷰가 없습니다.</p>
+    {% endif %}
+{% endblock %}

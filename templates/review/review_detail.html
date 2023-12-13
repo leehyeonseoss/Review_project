@@ -1,0 +1,9 @@
+<div>
+    <h3>{{ review.subject }}</h3>
+    <p>{{ review.content }}</p>
+    {% if review.image %}
+        <img src="{{ review.image.url }}">
+    {% endif %}
+    <a href="{% url 'review:edit' review.id %}">수정</a>
+    <a href="{% url 'review:delete' review.id %}">삭제</a>
+</div>
