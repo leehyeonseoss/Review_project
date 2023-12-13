@@ -4,6 +4,8 @@
     {% if review.image %}
         <img src="{{ review.image.url }}">
     {% endif %}
-    <a href="{% url 'review:edit' review.id %}">수정</a>
-    <a href="{% url 'review:delete' review.id %}">삭제</a>
+    <div>
+        <a href="{% url 'review:edit' review.id %}" class="btn btn-primary">수정</a>
+        <a href="{% url 'review:delete' review.id %}" class="btn btn-danger">삭제</a>
+    </div>
 </div>
